@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pustr.c                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 14:03:11 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 14:05:23 by anfouger         ###   ########.fr       */
+/*   Created: 2025/10/30 14:12:43 by anfouger          #+#    #+#             */
+/*   Updated: 2025/10/30 14:13:36 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(const char *s)
+void	ft_putchar(char c)
 {
-	int i;
-	while (s[i++])
-		write(1, &s[i], 1);
+	write(1, &c, 1);
 }

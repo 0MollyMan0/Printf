@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 13:16:28 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 14:30:31 by anfouger         ###   ########.fr       */
+/*   Created: 2025/10/30 14:03:11 by anfouger          #+#    #+#             */
+/*   Updated: 2025/10/30 14:12:06 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "ft_printf.h"
 
-void	ft_printf(const char *s, ...);
-void	ft_putchar(char c);
-void	ft_putstr(const char *s);
-void	ft_putnbr_base(int nbr, char *base);
+void	ft_putstr(const char *s)
+{
+	int i;
+	
+	i = 0;
+	while (s[i++])
+		write(1, &s[i], 1);
+}
