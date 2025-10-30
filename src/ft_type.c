@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_type.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 13:16:28 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 15:27:45 by anfouger         ###   ########.fr       */
+/*   Created: 2025/10/30 15:21:42 by anfouger          #+#    #+#             */
+/*   Updated: 2025/10/30 15:35:26 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "./ft_printf.h"
 
-int	ft_printf(const char *s, ...);
-int	ft_putchar(char c);
-int	ft_putstr(const char *s);
-int	ft_putnbr_base(int nbr, char *base);
+int	ft_type(c)
+{
+	switch (c)
+	{
+	if (c = '%')
+		ft_putchar('%');
+	if (c = 'c')
+		ft_putchar();
+	if (c = 's')
+		ft_putstr();
+	if (c = 'i' && 'd')
+		ft_putnbr_fd( , 1);
+	if (c = 'x' && 'X')
+	{
+		
+	}
+	if (c = 'u')
+	default:
+		
+	}
+}

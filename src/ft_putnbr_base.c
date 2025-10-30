@@ -6,37 +6,50 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:23:42 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 14:24:02 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:44:51 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr_base(int nbr, char *base);
+int	ft_putnbr_base_hex(int nbr, char def_base);
 int		ft_strlen(char *str);
-void	ft_putnbr_base_ll(long long nbr, char *base);
+int	ft_putnbr_base_ll(long long nbr, char *base);
 int		ft_verif_base(char *base);
 
-void	ft_putnbr_base_ll(long long nbr, char *base)
+int	ft_putnbr_base_ll(long long nbr, char *base)
 {
-	char	w;
+	int	count = 0;
+	char	c;
+	int	base_len = ft_strlen(base);
 
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
+		count++;
 		nbr *= -1;
 	}
-	if (nbr / ft_strlen(base))
-		ft_putnbr_base(nbr / ft_strlen(base), base);
-	w = base[nbr % ft_strlen(base)];
-	write (1, &w, 1);
+	if (nbr >= base_len)
+		count += ft_putnbr_base_ll(nbr / base_len, base);
+	c = base[nbr % base_len];
+	write(1, &c, 1);
+	count++;
+	return (count);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base_hex(int nbr, char def_base)
 {
+	char	*base;
+	int		count;
+
+	if (def_base == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789abcdef";
 	if (ft_verif_base(base) == 1)
-		return ;
-	ft_putnbr_base_ll(nbr, base);
+		return (0);
+	count = ft_putnbr_base_ll(nbr, base);
+	return (count);
 }
 
 int	ft_verif_base(char *base)
