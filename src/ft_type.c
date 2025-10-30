@@ -6,30 +6,27 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:21:42 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 15:35:26 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:59:44 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_printf.h"
 
-int	ft_type(c)
+int	ft_type(char type, void *var)
 {
-	switch (c)
-	{
-	if (c = '%')
-		ft_putchar('%');
-	if (c = 'c')
-		ft_putchar();
-	if (c = 's')
-		ft_putstr();
-	if (c = 'i' && 'd')
-		ft_putnbr_fd( , 1);
-	if (c = 'x' && 'X')
-	{
-		
-	}
-	if (c = 'u')
-	default:
-		
-	}
+	int res;
+	
+	if (type = '%')
+		res = ft_putchar('%');
+	if (type = 'c')
+		res = ft_putchar(var);
+	if (type = 's')
+		res = ft_putstr(var);
+	if (type = 'i' && 'd')
+		res = ft_putnbr(var);
+	if (type = 'x' && 'X')
+		res = ft_putnbr_base_hex(var, type);
+	if (type = 'u')
+		res = ft_putnbr_u();
+	return (res);
 }
