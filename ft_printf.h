@@ -6,11 +6,12 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:16:28 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 16:06:48 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:22:49 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
+#include <stdarg.h>
 
 int	ft_printf(const char *s, ...);
 int	ft_putchar(char c);

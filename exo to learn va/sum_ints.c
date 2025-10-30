@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*   sum_ints.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 15:57:43 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 16:16:02 by anfouger         ###   ########.fr       */
+/*   Created: 2025/10/30 16:21:11 by anfouger          #+#    #+#             */
+/*   Updated: 2025/10/30 16:31:52 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_printf.h"
+#include <stdarg.h>
+#include <stdio.h>
 
-int	ft_putnbr_u(unsigned int nb)
+int sum_ints(int count, ...)
 {
-	char	w;
-	int		count;
+	int sum;
+	int i;
+	va_list	arg;
 
-	count = 0;
-	if (nb >= 10)
-		count += ft_putnbr_u(nb / 10);
-	w = (nb % 10) + '0';
-	count++;
-	write (1, &w, 1);
-	return (count);
+	sum = 0;
+	i = 0;
+	va_start(arg, count);
+	while (i < count)
+	{
+		sum +=	va_arg(arg, int);
+		i++;
+	}
+	va_end(arg);
+	return (sum);
+}
+
+int main(void) {
+    printf("%d\n", sum_ints(3, 10, 20, 30)); // 60
+    printf("%d\n", sum_ints(5, 1, 2, 3, 4, 5)); // 15
 }
