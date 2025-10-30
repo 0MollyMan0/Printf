@@ -6,13 +6,14 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:12:43 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 14:13:36 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:03:58 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
