@@ -23,11 +23,11 @@ void print_values(const char *fmt, ...)
 	while (fmt[i])
 	{
 		if (fmt[i] == 'd')
-			printf("%d", va_arg(arg, int));
+			printf("%d ", va_arg(arg, int));
 		if (fmt[i] == 'f')
-			printf("%f", va_arg(arg, double));
+			printf("%f ", va_arg(arg, double));
 		if (fmt[i] == 'c')
-			printf("%c", va_arg(arg, int));
+			printf("%c ", va_arg(arg, int));
 		i++;
 	}
 	va_end(arg);
