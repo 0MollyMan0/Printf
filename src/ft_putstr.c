@@ -6,13 +6,13 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:03:11 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 15:15:15 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/02 12:49:32 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(const char *s)
+int	ft_putstr(const char *s)
 {
 	int i;
 	
