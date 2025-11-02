@@ -33,3 +33,11 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
+
+test: $(NAME)
+	@echo "\033[1;36m🚀 Compilation du test...\033[0m"
+	@$(CC) $(CFLAGS) main.c -L. -lftprintf -I. -o test_printf
+	@echo "\033[1;32m✅ Exécutable prêt : ./test_printf\033[0m\n"
+	@./test_printf
+	@echo "\n\033[1;32m🎉 Tests terminés avec succès !\033[0m"
+

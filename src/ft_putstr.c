@@ -6,7 +6,7 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:03:11 by anfouger          #+#    #+#             */
-/*   Updated: 2025/11/02 12:49:32 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/02 13:21:12 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int	ft_putstr(const char *s)
 	int i;
 	
 	i = 0;
-	while (s[i++])
+	while (s[i])
+	{
 		write(1, &s[i], 1);
+		i++;
+	}
 	return (i);
 }
