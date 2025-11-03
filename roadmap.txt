@@ -1,4 +1,0 @@
-1. write the str
-2. check if %
-3. check whats behind %
-4. lunch the corresponding write (itoa, putstr, ect..)

@@ -7,7 +7,7 @@ SRC_DIR = src
 LIBFT_DIR = libft
 
 SRC = $(addprefix $(SRC_DIR)/, ft_printf.c ft_putchar.c \
-ft_putnbr_base_hex.c ft_putnbr.c \
+ft_putnbr_hex.c ft_putnbr.c ft_putp.c\
 ft_putnbr_u.c ft_putstr.c ft_type.c)
 OBJ = $(SRC:.c=.o)
 
