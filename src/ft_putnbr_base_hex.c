@@ -17,18 +17,12 @@ int		ft_strlen(char *str);
 int	ft_putnbr_base_ll(long long nbr, char *base);
 int		ft_verif_base(char *base);
 
-int	ft_putnbr_base_ll(long long nbr, char *base)
+int	ft_putnbr_base_u(long long nbr, char *base)
 {
 	int	count = 0;
 	char	c;
 	int	base_len = ft_strlen(base);
 
-	if (nbr < 0)
-	{
-		write(1, "-", 1);
-		count++;
-		nbr *= -1;
-	}
 	if (nbr >= base_len)
 		count += ft_putnbr_base_ll(nbr / base_len, base);
 	c = base[nbr % base_len];
@@ -37,7 +31,7 @@ int	ft_putnbr_base_ll(long long nbr, char *base)
 	return (count);
 }
 
-int	ft_putnbr_base_hex(int nbr, char def_base)
+int	ft_putnbr_base_hex(unsigned int nbr, char def_base)
 {
 	char	*base;
 	int		count;
@@ -45,7 +39,7 @@ int	ft_putnbr_base_hex(int nbr, char def_base)
 	if (def_base == 'x')
 		base = "0123456789abcdef";
 	else
-		base = "0123456789abcdef";
+		base = "0123456789ABCDEF";
 	if (ft_verif_base(base) == 1)
 		return (0);
 	count = ft_putnbr_base_ll(nbr, base);
@@ -80,14 +74,9 @@ int	ft_verif_base(char *base)
 int	ft_strlen(char *str)
 {
 	int	i;
-	int	count;
 
 	i = 0;
-	count = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-		count++;
-	}
-	return (count);
+	return (i);
 }

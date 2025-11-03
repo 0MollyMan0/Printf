@@ -25,7 +25,7 @@ int	ft_type(char type, va_list args)
 	else if (type == 'i' || type == 'd')
 		res = ft_putnbr(va_arg(args, int));
 	else if (type == 'x' || type == 'X')
-		res = ft_putnbr_base_hex(va_arg(args, int), type);
+		res = ft_putnbr_base_hex(va_arg(args, unsigned int), type);
 	else if (type == 'u')
 		res = ft_putnbr_u(va_arg(args, unsigned int));
 	else

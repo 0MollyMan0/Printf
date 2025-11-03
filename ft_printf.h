@@ -16,7 +16,7 @@
 int	ft_printf(const char *s, ...);
 int	ft_putchar(char c);
 int	ft_putstr(const char *s);
-int	ft_putnbr_base_hex(int nbr, char def_base);
+int	ft_putnbr_base_hex(unsigned int nbr, char def_base);
 int	ft_putnbr_u(unsigned int nb);
 int	ft_putnbr(int nb);
 int	ft_type(char type, va_list args);
