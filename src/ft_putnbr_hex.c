@@ -6,7 +6,7 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:52:04 by anfouger          #+#    #+#             */
-/*   Updated: 2025/11/03 11:02:15 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:11:23 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_putnbr_base_u(unsigned long nbr, char *base)
 	return (count);
 }
 
-int	ft_putnbr_hex(unsigned long nbr, char def_base)
+int	ft_putnbr_hex(unsigned int nbr, char def_base)
 {
 	int		count;
 

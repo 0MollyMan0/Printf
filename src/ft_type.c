@@ -6,7 +6,7 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:21:42 by anfouger          #+#    #+#             */
-/*   Updated: 2025/11/03 10:56:42 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:11:32 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_type(char type, va_list args)
 	else if (type == 'p')
 		res = ft_putp(va_arg(args, unsigned long));
 	else if (type == 'x' || type == 'X')
-		res = ft_putnbr_hex(va_arg(args, unsigned long), type);
+		res = ft_putnbr_hex(va_arg(args, unsigned int), type);
 	else if (type == 'u')
 		res = ft_putnbr_u(va_arg(args, unsigned int));
 	else
