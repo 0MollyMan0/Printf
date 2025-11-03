@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_hex.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:23:42 by anfouger          #+#    #+#             */
-/*   Updated: 2025/10/30 15:44:51 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/03 10:40:52 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+unsigned long	ft_strlen(char *str)
 {
-	int	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -24,10 +24,12 @@ int	ft_strlen(char *str)
 
 int	ft_putnbr_base_u(unsigned long nbr, char *base)
 {
-	int	count = 0;
-	char	c;
-	int	base_len = ft_strlen(base);
+	int				count;
+	char			c;
+	unsigned long	base_len;
 
+	count = 0;
+	base_len = ft_strlen(base);
 	if (nbr >= base_len)
 		count += ft_putnbr_base_u(nbr / base_len, base);
 	c = base[nbr % base_len];
@@ -39,6 +41,7 @@ int	ft_putnbr_base_u(unsigned long nbr, char *base)
 int	ft_putnbr_base_hex(unsigned long nbr, char def_base)
 {
 	int		count;
+
 	if (def_base == 'p')
 	{
 		if (!nbr)
