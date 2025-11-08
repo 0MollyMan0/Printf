@@ -6,11 +6,14 @@
 /*   By: anfouger <anfouger@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:16:28 by anfouger          #+#    #+#             */
-/*   Updated: 2025/11/03 11:12:09 by anfouger         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:30:18 by anfouger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#ifndef FT_PRINTF
+#define FT_PRINTF
+
+// #include "./libft/libft.h"
 #include <stdarg.h>
 
 int	ft_printf(const char *s, ...);
@@ -21,3 +24,5 @@ int	ft_putp(unsigned long nbr);
 int	ft_putnbr_u(unsigned int nb);
 int	ft_putnbr(int nb);
 int	ft_type(char type, va_list args);
+
+#endif
