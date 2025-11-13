@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-#define FT_PRINTF
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-// #include "./libft/libft.h"
-#include <stdarg.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int	ft_printf(const char *s, ...);
 int	ft_putchar(char c);
